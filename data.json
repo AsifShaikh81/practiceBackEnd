@@ -1,0 +1,26 @@
+[
+  {
+    "name": "asif",
+    "age": 22,
+    "role": "full stack engineer",
+    "salary": 100000
+  },
+  {
+    "name": "john",
+    "age": 23,
+    "role": "back end engineer",
+    "salary": 90000
+  },
+  {
+    "name": "peter",
+    "age": 21,
+    "role": "front end engineer",
+    "salary": 80000
+  },
+  {
+    "name": "thomas",
+    "age": 24,
+    "role": "full stack engineer",
+    "salary": 100000
+  }
+]
