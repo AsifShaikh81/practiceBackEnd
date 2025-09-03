@@ -15,7 +15,7 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 const userRoute = require('../routes/route.js') // importing routes 
-app.use('/www.asif.com', userRoute)
+app.use('/asif', userRoute)
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {

@@ -1,0 +1,64 @@
+✅ Rule of Thumb:
+
+GET → req.params / req.query
+
+DELETE → req.params
+
+POST/PUT/PATCH → req.body
+
+
+why app.use
+Bahut accha sawaal hai Asif 👌
+
+Express mein `app.use()` ka matlab hai:
+➡️ **middleware ko globally lagana** (poore application ke liye).
+
+---
+
+### Middleware kya hota hai?
+
+Middleware ek aisi function hoti hai jo **request (req)** aur **response (res)** ke beech ka bridge hai.
+Ye har incoming request pe chalti hai jab tak usse specifically kisi route pe restrict na kiya ho.
+
+---
+
+### `app.use()` ka kaam
+
+* Agar tum `app.use(mongoSanitize())` likhte ho → iska matlab hai ki har ek request ke aane par sabse pehle ye middleware chalega.
+* Ye request body, query, params ko check karega aur agar koi dangerous `$` ya `.` operator ho to usse remove kar dega.
+
+---
+
+### Example:
+
+```js
+const express = require("express");
+const app = express();
+
+// custom middleware
+app.use((req, res, next) => {
+  console.log("Har request ke liye yeh chalega");
+  next(); // next middleware ya route ko control de deta hai
+});
+
+app.get("/", (req, res) => {
+  res.send("Hello Asif!");
+});
+
+app.listen(3000, () => console.log("Server running"));
+```
+
+👉 Is example me, **`app.use()`** se defined middleware har ek request pe chalega.
+Matlab agar tum `/about`, `/contact`, `/api` kisi bhi route pe jao → wo middleware pehle execute hoga.
+
+---
+
+🔑 **Summary**:
+
+* `app.use()` → global middleware lagane ke liye hota hai.
+* Ye har request pe execute hota hai.
+* Iska use security (helmet, mongoSanitize, xss-clean), logging (morgan), parsing (express.json), etc. ke liye hota hai.
+
+---
+
+Kya tum chahte ho main tumhe `app.use()` aur `app.get()` ke beech ka **difference** bhi samjhau?

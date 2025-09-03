@@ -1,0 +1,40 @@
+[{
+  "_id": {
+    "$oid": "68ab0381ec3d86a4f196a930"
+  },
+  "name": "asif",
+  "age": 22,
+  "role": "full stack engineer",
+  "salary": 10000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68ab0381ec3d86a4f196a931"
+  },
+  "name": "john",
+  "age": 23,
+  "role": "back end engineer",
+  "salary": 90000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68ab0381ec3d86a4f196a932"
+  },
+  "name": "peter",
+  "age": 21,
+  "role": "front end engineer",
+  "salary": 80000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68ab04dc024ea89c2753ace7"
+  },
+  "name": "afifa",
+  "age": 25,
+  "role": "senior full stack engineer",
+  "salary": 200000,
+  "__v": 0
+}]
