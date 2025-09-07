@@ -185,3 +185,28 @@ exports.getAllName = async (req, res) => {
     });
   }
 };
+
+// ===============update me =====================
+const filterObj = (obj, ...allowedFields) => {
+  const newObj = {};
+  Object.keys(obj).forEach((el) => {
+    if (allowedFields.includes(el)) newObj[el] = obj[el];
+  });
+  return newObj;
+};
+
+// exports.updateMe = async(req,res)=>{
+//     if (req.body.password || req.body.passwordConfirm) {
+//     return next(new AppError('this route is not for user', 400));
+//   }
+
+//   const filterBody = filterObj(req.body, 'name', 'email');
+//   const updateUser = await userM.findByIdAndUpdate(req.user.id, filterBody, { new: true, runValidators: true });
+//   res.status(200).json({
+//     status: 'success',
+//     data: {
+//       user: updateUser,
+//     },
+//   });
+// }
+ 
